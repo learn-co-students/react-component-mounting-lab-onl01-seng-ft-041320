@@ -7,7 +7,18 @@ class Timer extends Component {
   };
 
   // add your code here
+componentDidMount() {
+this.interval =  setInterval(this.clockTick , 1000)
+}
 
+componentWillUnmount() {
+this.stopClock
+}
+
+
+// setInterval(() => {
+//   console.log('you can see me every 3 seconds')
+// }, 3000);
   render() {
     const { time, color } = this.state;
     return (
